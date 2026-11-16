@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Installer build output
+installer/output/
+
+# IDE and editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.log
