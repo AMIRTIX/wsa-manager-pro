@@ -12,7 +12,6 @@
 
 <p align="center">
   <a href="https://github.com/AMIRTIX/wsa-manager-pro/releases"><img alt="GitHub Releases" src="https://img.shields.io/github/v/release/AMIRTIX/wsa-manager-pro?style=for-the-badge&color=2563eb"></a>
-  <a href="https://github.com/AMIRTIX/wsa-manager-pro/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-not%20specified-lightgrey?style=for-the-badge"></a>
   <a href="https://github.com/AMIRTIX/wsa-manager-pro"><img alt="Platform" src="https://img.shields.io/badge/platform-Windows-0078D4?style=for-the-badge&logo=windows"></a>
 </p>
 
@@ -157,9 +156,23 @@ Some application bundles require additional split APK selection, OBB files, or p
 
 ## Support the Project
 
-If you find WSA Manager Pro useful, you can support the project through the addresses shown in the application's **Support This App** window.
+### Help keep WSA Manager Pro moving forward
 
-The application only displays and copies these addresses. It does not connect to wallets or process payments.
+WSA Manager Pro is an independently developed project. Designing, maintaining, testing, and improving a desktop application takes time and effort. If this tool has been useful to you, a voluntary contribution can help support continued development.
+
+Your support may help with:
+- Fixing bugs and improving reliability.
+- Testing compatibility with different WSA builds.
+- Improving the user experience and adding useful features.
+- Keeping the project maintained for the community.
+
+**Want to support the project?**
+
+Open WSA Manager Pro and select **Support This App** to view the available cryptocurrency donation addresses. You can copy an address from the app and contribute using the network shown for that address.
+
+Every contribution is completely optional and appreciated. There is no payment required to use the project, and donations do not purchase special features or guarantee a particular update. Please double-check the cryptocurrency, network, and address before sending; cryptocurrency transfers are generally irreversible.
+
+Thank you for trying WSA Manager Pro, sharing feedback, reporting issues, and helping this project grow. Even if you cannot donate, recommending the project or giving it a ⭐ on GitHub is a meaningful way to help.
 
 ## Disclaimer
 
