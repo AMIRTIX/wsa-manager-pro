@@ -119,7 +119,7 @@ Before launching WSA Manager Pro, make sure you have:
 
 ### Launch, stop, or uninstall
 
-Select an installed application and use its **Launch**, **Stop**, or **Uninstall** action. Uninstallation requires confirmation.
+Select an installed application and use its **Launch**, **Stop**, or **Uninstall** action. When you have finished using an app, select it and click **Stop** to stop its running process in WSA. Uninstallation requires confirmation.
 
 ### Search applications
 
