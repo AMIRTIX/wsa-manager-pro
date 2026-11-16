@@ -32,7 +32,7 @@
 
 Connect to WSA, browse installed apps, install supported packages, launch or stop apps, and uninstall applications — without having to manage every task manually.
 
-> **Please note:** WSA Manager Pro is a management utility, not an Android emulator. It does not install, replace, or provide WSA. A working WSA environment is required.
+> **Important:** WSA Manager Pro is a management utility, not an Android emulator. You must install WSA and ADB separately before using the application. It does not install, replace, or provide either of them.
 
 ## WSA at a glance
 
@@ -87,22 +87,27 @@ Download the installer: **[WSA-Manager-Pro-Setup.exe](https://github.com/AMIRTIX
 
 ## Requirements
 
-- A compatible Windows system.
-- An existing and functional WSA installation.
-- Android Debug Bridge (ADB) available to the application.
-- WSA developer settings configured when required.
+Before launching WSA Manager Pro, make sure you have:
 
-**WSA availability notice:** Microsoft ended general availability of Windows Subsystem for Android through the Microsoft Store on March 5, 2025. This application is intended for users who already have a working WSA installation.
+1. **Windows:** A compatible Windows system.
+2. **WSA:** An installed and working version of Windows Subsystem for Android. The official Microsoft version and modified/custom WSA builds are both supported, provided the build works on your Windows system and allows ADB connections.
+3. **ADB:** Android Debug Bridge must be installed and accessible on your system.
+4. **Developer access:** WSA developer mode / ADB debugging must be enabled when required by your WSA build.
+
+**Important:** WSA Manager Pro does not include or install WSA or ADB. Install and configure both before using the app. Compatibility can vary between WSA builds.
+
+**WSA availability notice:** Microsoft ended general availability of Windows Subsystem for Android through the Microsoft Store on March 5, 2025. Users can use an existing official installation or a compatible modified/custom WSA build.
 
 ## Getting Started
 
-1. Make sure WSA is installed and available on your system.
-2. Download and run the installer.
-3. Launch **WSA Manager Pro**.
-4. Select **Auto Setup WSA**.
-5. Wait for the connection status to update.
-6. Refresh the application list if necessary.
-7. Select an application to manage it.
+1. Install a working WSA build (official Microsoft or modified/custom).
+2. Install ADB and make sure it is accessible on your system.
+3. Enable WSA developer mode / ADB debugging if your build requires it.
+4. Download and run the WSA Manager Pro installer.
+5. Launch **WSA Manager Pro**.
+6. Select **Auto Setup WSA**.
+7. Wait for the connection status to update.
+8. Refresh the application list if necessary.
 
 ## Managing Applications
 
@@ -135,19 +140,19 @@ Some application bundles require additional split APK selection, OBB files, or p
 
 | Problem | Suggested action |
 | --- | --- |
-| WSA connection fails | Verify that WSA is installed and running correctly. |
-| ADB is not detected | Make sure ADB is available to the application. |
-| No applications appear | Check the WSA connection, then refresh the application list. |
-| APK installation fails | Check the package file and the WSA connection. |
-| An application does not launch | Verify that it is installed and compatible with WSA. |
+| WSA connection fails | Verify that WSA is installed, running, and has ADB debugging enabled. |
+| ADB is not detected | Install ADB and make sure it is accessible on your system. |
+| No applications appear | Check the WSA/ADB connection, then refresh the application list. |
+| APK installation fails | Check the package file, ADB connection, and WSA status. |
+| An application does not launch | Verify that it is installed and compatible with your WSA build. |
 | XAPK/APKS installation fails | The package may require split APK or OBB handling that is not supported. |
 
 ## Limitations
 
-- WSA Manager Pro does not install or replace WSA.
+- WSA Manager Pro does not install or replace WSA or ADB.
 - It does not automatically enable WSA developer settings.
 - Some Android application bundles may require installation steps beyond the supported functionality.
-- Compatibility depends on the Windows and WSA environment.
+- Compatibility depends on the Windows and WSA environment, including the specific WSA build.
 - Not every Android application is guaranteed to work under WSA.
 
 ## Support the Project
