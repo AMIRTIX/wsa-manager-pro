@@ -1,80 +1,76 @@
 # WSA Manager Pro
 
 <p align="center">
-  <strong>A desktop utility for managing Android applications on Windows Subsystem for Android (WSA).</strong>
+  <strong>A simple desktop application for managing Android apps on Windows Subsystem for Android.</strong>
 </p>
 
 <p align="center">
   <img src="icon.ico" alt="WSA Manager Pro icon" width="96">
 </p>
 
-<p align="center">
-  <strong>Windows Desktop Application · Python · CustomTkinter · ADB</strong>
-</p>
-
 ---
 
 ## Overview
 
-**WSA Manager Pro** is a Windows desktop application designed to simplify the management of Android applications running through Windows Subsystem for Android (WSA).
+**WSA Manager Pro** provides a convenient graphical interface for managing Android applications in an existing Windows Subsystem for Android (WSA) environment.
 
-It provides a graphical interface for connecting to WSA, browsing installed Android applications, installing APK packages, launching and stopping apps, and uninstalling applications.
+Connect to WSA, browse installed apps, install supported Android packages, launch or stop applications, and uninstall apps when they are no longer needed.
 
-The application uses Android Debug Bridge (ADB) to communicate with an existing WSA installation.
+> **Important:** WSA Manager Pro is not an Android emulator and does not install or replace WSA. A working WSA environment is required.
 
-> **Important:** WSA Manager Pro is a management utility, not an Android emulator or a replacement for WSA. It does not install WSA or enable Android developer settings automatically.
+## Download
+
+Get the Windows installer:
+
+**[Download WSA Manager Pro Setup](https://github.com/AMIRTIX/wsa-manager-pro/raw/refs/heads/main/installer/WSA-Manager-Pro-Setup.exe)**
+
+The installer will be available at this link once the setup file has been uploaded to the repository.
 
 ## Features
 
-- **Automatic WSA Connection** — Attempts to start WSA and establish an ADB connection.
-- **Application Management** — Lists installed third-party Android applications.
-- **APK Installation** — Installs APK files through ADB.
-- **App Launching** — Starts installed Android applications.
-- **App Control** — Stops applications using Android package commands.
-- **Application Uninstallation** — Removes applications after user confirmation.
-- **Search** — Filters applications by name or package identifier.
-- **Activity Log** — Displays timestamped application events and operation results.
-- **XAPK / APKS Support** — Provides basic package installation support, subject to package structure and split APK limitations.
-- **Donation Window** — Displays supported cryptocurrency addresses with copy functionality.
-
-## Interface
-
-The application uses a dark desktop interface with two main areas:
-
-| Section | Description |
-| --- | --- |
-| Sidebar | WSA connection controls, connection status, refresh, log clearing and support |
-| Main panel | Android application management, APK installation, search and activity log |
+- **Automatic WSA Connection** — Attempts to start WSA and connect to it.
+- **Application List** — Displays installed third-party Android applications.
+- **APK Installation** — Installs APK files through the connected WSA environment.
+- **App Launching** — Launches installed applications.
+- **App Control** — Stops selected applications.
+- **Uninstallation** — Removes applications after user confirmation.
+- **Search** — Filters apps by name or package identifier.
+- **Activity Log** — Shows operation status and useful feedback.
+- **XAPK / APKS Support** — Basic support, depending on package structure.
+- **Support Window** — Displays project support addresses with copy functionality.
 
 ## Requirements
 
-Before using WSA Manager Pro, make sure you have:
-
-- A compatible Windows installation.
+- A compatible Windows system.
 - An existing and functional WSA installation.
-- Android Debug Bridge (ADB).
+- Android Debug Bridge (ADB) available to the application.
 - WSA developer settings configured when required.
-- Android application packages in a supported format.
 
-**WSA availability notice:** Microsoft ended the general availability of Windows Subsystem for Android through the Microsoft Store in 2025. This project is intended for users who already have a working WSA installation.
+**WSA availability notice:** Microsoft ended the general availability of Windows Subsystem for Android through the Microsoft Store in 2025. This application is intended for users who already have a working WSA installation.
+
+## Installation
+
+1. Download **WSA-Manager-Pro-Setup.exe** using the link above.
+2. Run the installer.
+3. Follow the installation instructions.
+4. Launch **WSA Manager Pro** from the installed application or shortcut.
 
 ## Getting Started
 
-1. Download and install WSA Manager Pro.
-2. Make sure WSA is installed and available on your system.
-3. Open WSA Manager Pro.
-4. Select **Auto Setup WSA**.
-5. Wait for the connection status to update.
-6. Refresh the application list if necessary.
-7. Select an application to manage it.
+1. Make sure WSA is installed and available on your system.
+2. Open WSA Manager Pro.
+3. Select **Auto Setup WSA**.
+4. Wait for the connection status to update.
+5. Refresh the application list if necessary.
+6. Select an application to manage it.
 
-## Application Management
+## Managing Applications
 
 ### Install an APK
 
 1. Select **Install App**.
 2. Choose an APK file.
-3. Wait for ADB to complete the installation.
+3. Wait for the installation to finish.
 4. Check the activity log for the result.
 
 ### Launch an Application
@@ -83,7 +79,7 @@ Select an installed application and use its **Launch** action.
 
 ### Stop an Application
 
-Use the **Stop** action to force-stop the selected Android package.
+Use the **Stop** action to stop the selected Android application.
 
 ### Uninstall an Application
 
@@ -97,135 +93,46 @@ Enter an application name or package identifier in the search field.
 
 ### Auto Setup WSA
 
-The automatic connection process attempts to:
-
-- Start WSA.
-- Connect to the default ADB endpoint.
-- Retry the connection when necessary.
-- Update the connection status.
-- Load installed applications after a successful connection.
+This option attempts to start WSA, establish an ADB connection, and load the installed application list.
 
 ### Disconnect & Close WSA
 
-This action attempts to disconnect ADB and close relevant WSA processes.
+This option attempts to disconnect ADB and close relevant WSA processes.
 
-**Note:** Connection and shutdown results depend on the local WSA and ADB environment.
+Connection and shutdown results depend on the local WSA environment.
 
 ## Supported Package Formats
 
 | Format | Support |
 | --- | --- |
-| APK | Standard installation through ADB |
+| APK | Standard installation |
 | XAPK | Basic archive-based installation |
 | APKS | Basic split-package installation |
 
-Some application bundles require additional split APK selection, OBB files, or package-specific installation steps. These cases may not be supported by the current implementation.
-
-## Activity Log
-
-The activity log provides feedback about operations performed by the application.
-
-Log categories include:
-
-- Info
-- Success
-- Warning
-- Error
-
-Use **Clear Log** to clear the visible activity history.
+Some application bundles require additional split APK selection, OBB files, or package-specific installation steps. These cases may not be supported.
 
 ## Troubleshooting
 
 | Problem | Suggested action |
 | --- | --- |
 | WSA connection fails | Verify that WSA is installed and running correctly. |
-| ADB is not detected | Install ADB or make sure its executable is accessible through PATH. |
-| No applications appear | Confirm that ADB is connected to the correct WSA instance, then refresh the list. |
-| APK installation fails | Check the APK file and the ADB connection. |
-| An application does not launch | Verify that the application is installed and compatible with the WSA environment. |
-| XAPK/APKS installation fails | The package may require split APK or OBB handling not supported by the current implementation. |
-
-## Technology Stack
-
-- **Python** — Application logic.
-- **CustomTkinter** — Desktop graphical interface.
-- **ADB** — Android device communication.
-- **Subprocess** — External process management.
-- **Threading** — Background operations.
-- **ThreadPoolExecutor** — Concurrent task execution.
-- **PyInstaller** — Windows executable packaging.
-- **Inno Setup** — Windows installer generation.
-
-## Project Structure
-
-```text
-WSA-Manager-Pro/
-│
-├── test.py
-├── icon.ico
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── installer/
-│   └── WSA-Manager-Pro-Setup.exe
-│
-└── dist/
-    └── WSA Manager Pro/
-        └── WSA Manager Pro.exe
-```
-
-*The actual repository structure may differ depending on the final build and release files.*
-
-## Building from Source
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/AMIRTIX/wsa-manager-pro.git
-cd wsa-manager-pro
-```
-
-### 2. Install dependencies
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### 3. Run the application
-
-```bash
-python test.py
-```
-
-### 4. Build the executable
-
-The project uses PyInstaller for packaging.
-
-```bash
-pyinstaller --noconfirm --windowed --name "WSA Manager Pro" --icon icon.ico test.py
-```
-
-The generated executable is placed in the `dist` directory.
-
-### 5. Build the Windows installer
-
-The Windows installer is generated separately using Inno Setup and the project's installer configuration.
-
-The installer should be tested on a clean Windows environment before release.
+| ADB is not detected | Make sure ADB is available to the application. |
+| No applications appear | Check the WSA connection, then refresh the application list. |
+| APK installation fails | Check the package file and the WSA connection. |
+| An application does not launch | Verify that it is installed and compatible with WSA. |
+| XAPK/APKS installation fails | The package may require split APK or OBB handling that is not supported. |
 
 ## Limitations
 
 - WSA Manager Pro does not install or replace WSA.
 - It does not automatically enable WSA developer settings.
-- ADB must be available to the application.
-- Some Android application bundles may require installation procedures beyond the current implementation.
-- Compatibility depends on the user's Windows, WSA and ADB environment.
+- Some Android application bundles may require installation steps beyond the supported functionality.
+- Compatibility depends on the Windows and WSA environment.
 - Not every Android application is guaranteed to work under WSA.
 
 ## Support the Project
 
-If you find WSA Manager Pro useful, you can support its development through the addresses provided in the application's **Support This App** window.
+If you find WSA Manager Pro useful, you can support the project through the addresses shown in the application's **Support This App** window.
 
 The application only displays and copies these addresses. It does not connect to wallets or process payments.
 
@@ -233,13 +140,13 @@ The application only displays and copies these addresses. It does not connect to
 
 WSA Manager Pro is an independent community project. It is not affiliated with, endorsed by, or supported by Microsoft.
 
-Windows Subsystem for Android, Android, and ADB are trademarks or products of their respective owners.
+Windows Subsystem for Android, Android, and ADB are products or trademarks of their respective owners.
 
-Use the application at your own discretion. Always review package files before installing them.
+Use the application at your own discretion. Always review application packages before installing them.
 
 ## License
 
-No open-source license has been specified yet. All rights and permissions remain subject to the copyright holder's terms until a license is added.
+No open-source license has been specified. All rights and permissions remain subject to the copyright holder's terms until a license is added.
 
 ---
 
